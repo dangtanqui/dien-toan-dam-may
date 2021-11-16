@@ -1,0 +1,30 @@
+<div class="col-md-6 offset-md-3">
+    <h2 class="b">Thêm sinh viên</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="a">Mã lớp</label>
+            <input type="text" name="maLop" id="maLop" [(ngModel)]="maLop" class="form-control" placeholder="Nhập mã lớp...">
+        </div>
+        <div class="form-group">
+            <label class="a">Mã sinh viên</label>
+            <input type="text" name="masv" id="masv" [(ngModel)]="sinhVien.masv" class="form-control" placeholder="Nhập mã sinh viên...">
+        </div>
+        <div class="form-group">
+            <label class="a">Họ tên</label>
+            <input type="text" name="hoTen" id="hoTen" [(ngModel)]="sinhVien.hoTen" class="form-control" placeholder="Nhập họ tên...">
+        </div>    
+        <div class="form-group">
+            <label class="a">Ngày sinh</label>
+            <input type="text" name="ngaySinh" id="ngaySinh" [(ngModel)]="sinhVien.ngaySinh" class="form-control" placeholder="Nhập ngày sinh...">
+        </div>   
+        <div class="form-group">
+            <label class="a">Giới tính</label>
+            <input type="text" name="gioiTinh" id="gioiTinh" [(ngModel)]="sinhVien.gioiTinh" class="form-control" placeholder="Nhập giới tính...">
+        </div>   
+        <div class="form-group">
+            <label class="a">Điểm trung bình</label>
+            <input type="text" name="diemtb" id="diemtb" [(ngModel)]="sinhVien.diemtb" class="form-control" placeholder="Nhập điểm trung bình...">
+        </div>
+        <button class="btn btn-success them" type="submit">+ Thêm sinh viên</button>
+    </form>
+</div>

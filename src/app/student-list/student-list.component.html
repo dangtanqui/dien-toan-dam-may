@@ -1,0 +1,34 @@
+<h2 class="text-primary">Danh sách sinh viên của các lớp</h2>
+<div *ngFor="let lop of danhSachLop">
+    <h3>{{ lop.maLop }}</h3>
+    <h3>{{ lop.tenLop }}</h3>
+    <button class="btn btn-warning" (click)="capNhatTenLopBangMaLop(lop.maLop, lop)">Sửa lớp</button>
+    <button class="btn btn-danger" (click)="xoaLopBangMaLop(lop)">Xóa lớp</button>
+    <table class="table table-hover">
+        <thead>
+            <th>Mã sinh viên</th>
+            <th>Họ Tên</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Điểm trung bình</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sinhVien of lop.danhSachSinhVien">
+                <td>{{ sinhVien.masv }}</td>
+                <td>{{ sinhVien.hoTen }}</td>
+                <td>{{ sinhVien.ngaySinh }}</td>
+                <td>{{ sinhVien.gioiTinh }}</td>
+                <td>{{ sinhVien.diemtb }}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="updateStudent(sinhVien.masv)">Sửa</button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteStudent(sinhVien)">Xóa</button>
+                </td>
+                <td>
+                    <button class="btn btn-info" (click)="studentDetail(sinhVien.masv)">Thông tin</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

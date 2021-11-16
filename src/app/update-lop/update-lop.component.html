@@ -1,0 +1,14 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="b">Sửa lớp</h3>
+  <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label class="a">Mã lớp</label>
+          <input type="text" name="masv" id="masv" [(ngModel)]="lop.maLop" class="form-control" placeholder="Nhập mã lớp..." disabled>
+      </div>
+      <div class="form-group">
+          <label class="a">Tên</label>
+          <input type="text" name="hoTen" id="hoTen" [(ngModel)]="lop.tenLop" class="form-control" placeholder="Nhập tên lớp...">
+      </div>
+      <button class="btn btn-warning sua" type="submit">Sửa lớp</button>
+  </form>
+</div>
